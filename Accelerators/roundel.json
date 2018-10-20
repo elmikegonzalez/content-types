@@ -1,0 +1,44 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/roundel.json",
+  "title": "Roundel",
+  "description": "Roundel Accelerator",
+  "propertyOrder": [
+    "roundel",
+    "roundelRatio",
+    "opacity",
+    "roundelPosition"
+  ],
+  "type": "object",
+  "properties": {
+    "roundel": {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/image-link"
+    },
+    "roundelRatio": {
+      "type": "number",
+      "title": "Roundel Ratio",
+      "description": "A value between 0 and 3 e.g. 2",
+      "minimum": 0,
+      "maximum": 3
+    },
+    "opacity": {
+      "type": "number",
+      "title": "Roundel Opacity",
+      "description": "A value between 0 and 100 e.g. 50",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "roundelPosition": {
+      "type": "string",
+      "enum": [
+        "Top Left",
+        "Top Right",
+        "Bottom Left",
+        "Bottom Right",
+        "Middle Center"
+      ],
+      "title": "Roundel Position",
+      "description": "Roundel Position"
+    }
+  }
+}

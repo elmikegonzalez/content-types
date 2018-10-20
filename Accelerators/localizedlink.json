@@ -1,0 +1,62 @@
+{
+   "$schema":"http://bigcontent.io/cms/schema/v1/schema#",
+   "id":"https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/localizedlink.json",
+   "title":"Localized Link",
+   "description":"Localized Link",
+   "type":"object",
+   "allOf":[
+      {
+         "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+      }
+   ],
+   "propertyOrder":[
+      "label",
+      "value"
+   ],
+   "properties":{
+      "label":{
+         "allOf":[
+            {
+               "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+            }
+         ],
+         "properties":{
+            "values":{
+               "items":{
+                  "properties":{
+                     "value":{
+                        "title":"Call to action text",
+                        "description":"The text you want displayed with the call to action",
+                        "type":"string",
+                        "format":"text",
+                        "maxLength":256
+                     }
+                  }
+               }
+            }
+         }
+      },
+      "value":{
+         "allOf":[
+            {
+               "$ref":"http://bigcontent.io/cms/schema/v1/core#/definitions/localized-value"
+            }
+         ],
+         "properties":{
+            "values":{
+               "items":{
+                  "properties":{
+                     "value":{
+                        "title":"Call to action value",
+                        "description":"url to point to per locale",
+                        "type":"string",
+                        "format":"text",
+                        "maxLength":256
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+}

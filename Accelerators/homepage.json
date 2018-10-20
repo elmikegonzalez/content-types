@@ -1,0 +1,46 @@
+{
+  "$schema": "http://bigcontent.io/cms/schema/v1/schema#",
+  "id": "https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/homepage.json",
+  "title": "Homepage Accelerator",
+  "description": "Homepage Accelerator",
+  "allOf": [
+    {
+      "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content"
+    }
+  ],
+  "propertyOrder": [
+    "contentTypes"
+  ],
+  "type": "object",
+  "properties": {
+    "contentTypes": {
+      "type": "array",
+      "items": {
+        "allOf": [
+          {
+            "$ref": "http://bigcontent.io/cms/schema/v1/core#/definitions/content-link"
+          },
+          {
+            "properties": {
+              "contentType": {
+                "title": "Content Types",
+                "enum": [
+                  "https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/slider.json",
+                  "https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/promobanner.json",
+                  "https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/video.json",
+                  "https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/text.json",
+                  "https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/externalblock.json",
+                  "https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/splitblock.json",
+                  "https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/cardlist.json",
+                  "https://raw.githubusercontent.com/elmikegonzalez/content-types/development/Accelerators/image.json"
+                ]
+              }
+            }
+          }
+        ]
+      },
+      "title": "Content Type",
+      "description": ""
+    }
+  }
+}
